@@ -10,15 +10,17 @@
       rel="shortcut icon"
       href="./resources/images/Vector.svg"
       type="image/x-icon"
-      />
-    </head>
-    <body
+    />
+  </head>
+  <body
     class="bg-black flex justify-center items-center overflow-x-hidden select-none flex-col"
-    >
+  >
     <div
-      class="regressive min-w-full h-full backdrop-blur-sm absolute flex justify-center items-center top-0"
+      class="regressive min-w-full min-h-full max-h-[100%] backdrop-blur-sm absolute flex justify-center items-center top-0"
     ></div>
-    <header class="min-w-[100vw] flex justify-center items-center sticky top-0 z-30 backdrop-blur-sm">
+    <header
+      class="min-w-[100vw] flex justify-center items-center sticky top-0 z-30 backdrop-blur-sm"
+    >
       <a href="index.html">
         <div class="logo flex justify-center items-center cursor-pointer gap-2">
           <div class="title flex gap-1 justify-center items-center">
@@ -39,17 +41,21 @@
         </div>
       </a>
     </header>
-    <main class="flex justify-center items-center w-full px-4 flex-col">
-
+    <main class="flex justify-center items-center w-full px-4 py-4 flex-col">
       <div
         class="welcome items-center flex-col mt-24 justify-center flex w-[800px]"
       >
-        <span class="text-white text-center tracking-tighter font-bold text-7xl"
-          >Welcome to <b class="text-[#8F00FF]">iQuiz,</b> let's have fun and
-          learn!</span
-        >
+        <div class="text justify-center items-center w-10/12 sm:w-full flex">
+          <span
+            class="text-white sm:w-full text-center tracking-tighter w-10/12 font-bold text-2xl sm:text-7xl"
+            >Welcome to <b class="text-[#8F00FF]">iQuiz,</b>
+            let's <br> have fun and
+            learn!</span
+          >
+        </div>
+
         <img
-          class="brain w-[300px] mb-10 mt-10"
+          class="brain w-[150px] sm:w-[300px] mb-10 mt-10"
           src="./resources/images/brain.png"
           alt=""
         />
@@ -116,7 +122,9 @@
 
       <!-- quiz -->
 
-      <div class="main-quiz w-full max-w-[1920px] absolute flex flex-col items-center">
+      <div
+        class="main-quiz w-full max-w-[1920px] absolute flex flex-col items-center"
+      >
         <div
           class="time sm:w-[100px] sm:h-[100px] absolute border-solid border-[5px] border-[#8F00FF] w-[50px] h-[50px] rounded-full top-[30px] right-[100px] flex justify-center items-center text-white font-bold text-4xl"
         >
@@ -155,7 +163,11 @@
         </div>
       </div>
 
-      <img class="bg-img max-w-[1920px]" src="resources/images/pattern.png" alt="" />
+      <img
+        class="bg-img max-w-[1920px]"
+        src="resources/images/pattern.png"
+        alt=""
+      />
     </main>
     <input class="opacity-0" type="checkbox" id="true" />
     <script src="./function/script.js"></script>
