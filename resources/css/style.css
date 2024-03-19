@@ -86,8 +86,7 @@ main::before{
 
 .main-quiz{
     position: absolute;
-    right: -1000px;
-    visibility: hidden;
+    opacity: 0;
     transition: 2s;
 }
 
@@ -137,4 +136,11 @@ main::before{
 
 .question:hover{
     transform: scale(0.98);
+}
+
+@media (max-width: 600){
+    body{
+        width: 600px;
+        background-color: white;
+    }
 }

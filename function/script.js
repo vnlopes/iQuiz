@@ -3,7 +3,7 @@ let count = 6;
 const checkBox = document.querySelector('#true')
 
 const init = () =>{
-    document.querySelector('.main-quiz').style = 'right: 0; visibility: visible;'
+    document.querySelector('.main-quiz').style = 'opacity: 100%;'
     document.querySelector('.welcome').style = 'opacity: 0;'
     let regress = document.querySelector('.regressive')
     regress.style = 'color: white; opacity: 100%; z-index: 10; font-weight: 900; font-size: 10rem;'
