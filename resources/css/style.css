@@ -106,7 +106,7 @@ main::before{
 }
 
 .welcome{
-    transition: 1.3s;
+    transition: 1.3s,;
 }
 
 .brain{

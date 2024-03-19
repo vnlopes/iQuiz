@@ -1,5 +1,6 @@
-let time = 15;
+let time = 10;
 let count = 6;
+const checkBox = document.querySelector('#true')
 
 const init = () =>{
     document.querySelector('.main-quiz').style = 'right: 0; visibility: visible;'
@@ -28,6 +29,7 @@ const init = () =>{
                 clearInterval(fift)
                 time = 0;
                 alert('Seu tempo acabou!')
+                confirm()
             } else if(
                 time --
             )
@@ -35,4 +37,40 @@ const init = () =>{
         }, 1000);
     }, 7000);
 
+}
+
+let bOne = document.querySelector('#q1');
+let bTwo = document.querySelector('#q2');
+let bTree = document.querySelector('#q3');
+
+const mark2 = () => {
+    bOne.disabled = true;
+    bTwo.disabled = true;
+    checkBox.checked = true;
+    bTree.style = 'border: 3px solid #00e40b;'
+    // if(checkBox.checked == true){
+    //     alert('Parabéns, você acertou!')
+    // } else {
+    //     alert ('Você errou! ;(')
+    // }
+}
+
+const mark = () => {
+    bTree.disabled = true;
+    bTwo.disabled = true;
+   bOne.style = 'border: 3px solid #00e40b;'
+}
+
+const mark1 = () => {
+    bTwo.style = 'border: 3px solid #00e40b;'
+    bOne.disabled = true;
+    bTree.disabled = true;
+}
+
+const confirm = () => {
+    if(checkBox.checked == true){
+        alert('Parabéns, você acertou!')
+    } else {
+        alert ('Você errou! ;(')
+    }
 }
