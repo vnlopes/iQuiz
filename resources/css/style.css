@@ -97,6 +97,10 @@ main::before{
     font-size: 1rem;
 }
 
+header{
+    background-color: #0d0d0dd3;
+}
+
 .regressive{
     opacity: 0;
     transition: 0.9s;
