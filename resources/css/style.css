@@ -48,6 +48,7 @@ header{
 }
 
 header span{
+    z-index: 2;
     color: white;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
@@ -83,7 +84,56 @@ main::before{
     background-color: #8F00FF;
 }
 
+.main-quiz{
+    position: absolute;
+    right: -1000px;
+    visibility: hidden;
+    transition: 2s;
+}
+
+.time span::after{
+    content: "s";
+    width: 20px;
+    height: 20px;
+    font-size: 1rem;
+}
+
+.regressive{
+    opacity: 0;
+    transition: 0.9s;
+    z-index: 0;
+}
+
+.welcome{
+    transition: 1.3s;
+}
+
+.brain{
+    animation: float 3s infinite ease-in-out alternate;
+}
+
+@keyframes float{
+    from{
+        transform: translateY(0);
+    } to{
+        transform: translateY(10px);
+    }
+}
+
 .quiz{
     filter: drop-shadow(#8F00FF -4px 4px 0) drop-shadow(#000000 -6px 6px 4px);
     background: linear-gradient(180deg, rgba(255,255,255,1) 34%, rgba(208,148,255,1) 100%);
+}
+
+.question{
+    transition: 0.3s;
+    filter: drop-shadow(#000000af -6px 6px 4px);
+}
+
+.question:focus{
+    border: 3px solid green;
+}
+
+.question:hover{
+    transform: scale(0.98);
 }

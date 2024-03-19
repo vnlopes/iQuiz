@@ -29,14 +29,38 @@
         </svg>
       </div>
     </header>
-    <main class="flex justify-center">
+    <main class="flex items-center flex-col">
 
-        <div class="time w-[100px] h-[100px] absolute border-solid border-[5px] border-[#8F00FF] rounded-full top-[30px] right-[100px] flex justify-center items-center text-white font-bold text-4xl"><span>10</span></div>
+        <div class="regressive min-w-full h-screen backdrop-blur-sm absolute flex justify-center items-center">
+        </div>
 
-      <div class="quiz flex justify-center rounded-lg w-[500px] h-48 mt-[100px] bg-white">
-        <span class="w-[400px] font-medium mt-10 text-2xl"> Em quais anos ocorreu a segunda guerra mundial?</span>
-      </div>
+        <div class="welcome items-center flex-col mt-24 justify-center flex w-[800px]">
+            <span class="text-white text-center tracking-tighter font-bold text-7xl">Welcome to <b class="text-[#8F00FF]">iQuiz,</b> let's have fun and learn!</span>
+            <img class="brain w-[300px] mb-10 mt-10" src="./resources/images/brain.png" alt="">
+
+            <!-- start -->
+
+            <button onclick="init()" class="init relative flex flex-row items-center justify-center gap-2 rounded py-2 px-6 bg-transparent border border-[#7F30FF] text-zinc-100 animate-background hover:bg-[#7F30FF] focus:bg-[#7F30FF] transition-all duration-200 ease-in-out group relative py-3 rounded-lg" style="background-size: 400% 100%; background-image: linear-gradient(to right, rgba(127, 48, 255, 0.25), rgba(113, 144, 255, 0.15), rgba(127, 48, 255, 0.25));"><div class="pointer-events-none absolute inset-[-12px] -z-10 rounded-[4px] blur transition duration-300" style="opacity: 0; background: radial-gradient(240px at 190.469px 43px, rgba(127, 48, 255, 0.48), transparent 25%);"></div>Let's Pratice<i class="relative w-4 h-4 group-hover:ml-1 group-focus:ml-1 flex items-center justify-center transition-all duration-100 ease-in-out z-[1]"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute opacity-0 group-hover:opacity-100 group-focus:opacity-100 w-4 h-4 transition-all duration-100 ease-in-out  pointer-events-none select-none"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute opacity-100 group-hover:opacity-0 group-hover:translate-x-1 group-focus:opacity-0 group-focus:translate-x-1 w-5 h-5 transition-all duration-100 ease-in-out pointer-events-none select-none"><path d="M6.18194 4.18185C6.35767 4.00611 6.6426 4.00611 6.81833 4.18185L9.81833 7.18185C9.90272 7.26624 9.95013 7.3807 9.95013 7.50005C9.95013 7.6194 9.90272 7.73386 9.81833 7.81825L6.81833 10.8182C6.6426 10.994 6.35767 10.994 6.18194 10.8182C6.0062 10.6425 6.0062 10.3576 6.18194 10.1819L8.86374 7.50005L6.18194 4.81825C6.0062 4.64251 6.0062 4.35759 6.18194 4.18185Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></i></button>
+        </div>
+
+
+        <!-- quiz -->
+
+        <div class="main-quiz w-[1440px] flex flex-col items-center">
+            <div class="time w-[100px] h-[100px] absolute border-solid border-[5px] border-[#8F00FF] rounded-full top-[30px] right-[100px] flex justify-center items-center text-white font-bold text-4xl"><span class="mt-2">15</span></div>
+
+            <div class="quiz flex justify-center rounded-lg w-[500px] h-48 mt-[100px] bg-white">
+              <span class="w-[400px] font-medium mt-10 text-2xl"> Em quais anos ocorreu a segunda guerra mundial?</span>
+            </div>
+            <div class="questions w-[500px] flex flex-col gap-4 mt-8">
+              <div class="question cursor-pointer text-white pl-2 flex items-center w-[450px] h-12 bg-[#8F00FF] font-semibold rounded-lg"><span class="pr-2">A) </span> <span>1922 a 1928</span></div>
+              <div class="question cursor-pointer pl-2 flex items-center w-[350px] h-12 bg-white font-semibold rounded-lg"><span class="pr-2">B)</span><span>1912 a 1918</span></div>
+              <div class="question cursor-pointer text-white pl-2 flex items-center w-[400px] h-12 bg-[#8F00FF] font-semibold rounded-lg"><span class="pr-2">C) </span> <span>1939 a 1945</span></div>
+            </div>
+        </div>
+
       <img class="bg-img" src="resources/images/pattern.png" alt="" />
     </main>
+    <script src="./function/script.js"></script>
   </body>
 </html>
