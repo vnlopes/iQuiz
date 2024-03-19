@@ -102,6 +102,7 @@ main::before{
     opacity: 0;
     transition: 0.9s;
     z-index: 0;
+    background-color: #00000083;
 }
 
 .welcome{

@@ -5,7 +5,7 @@ const init = () =>{
     document.querySelector('.main-quiz').style = 'right: 0; visibility: visible;'
     document.querySelector('.welcome').style = 'opacity: 0;'
     let regress = document.querySelector('.regressive')
-    regress.style = 'color: white; opacity: 100%; z-index: 10; font-weight: 900; font-size: 6rem;'
+    regress.style = 'color: white; opacity: 100%; z-index: 10; font-weight: 900; font-size: 10rem;'
     
     setInterval(() => {
         if(count == 0){
@@ -33,6 +33,6 @@ const init = () =>{
             )
             document.querySelector('.time span').innerHTML = time;
         }, 1000);
-    }, 5000);
+    }, 7000);
 
 }
