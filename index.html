@@ -13,10 +13,10 @@
     />
   </head>
   <body
-    class="bg-black flex justify-center items-center overflow-x-hidden select-none flex-col"
+    class="bg-black flex items-center overflow-x-hidden min-h-[100vh] select-none flex-col"
   >
     <div
-      class="regressive min-w-full min-h-full max-h-[100%] backdrop-blur-sm absolute flex justify-center items-center top-0"
+      class="regressive block w-full h-full min-h-screen backdrop-blur-sm absolute flex justify-center items-center top-0"
     ></div>
     <header
       class="min-w-[100vw] flex justify-center items-center sticky top-0 z-30 backdrop-blur-sm"
@@ -41,9 +41,9 @@
         </div>
       </a>
     </header>
-    <main class="flex justify-center items-center w-full px-4 py-4 flex-col">
+    <main class="flex justify-center items-center w-full px-4 flex-col">
       <div
-        class="welcome items-center flex-col mt-24 justify-center flex w-[800px]"
+        class="welcome items-center flex-col mt-12 justify-center flex w-full sm:w-[800px]"
       >
         <div class="text justify-center items-center w-10/12 sm:w-full flex">
           <span
@@ -64,7 +64,7 @@
 
         <button
           onclick="init()"
-          class="init relative flex flex-row items-center justify-center gap-2 rounded py-2 px-6 bg-transparent border border-[#7F30FF] text-zinc-100 animate-background hover:bg-[#7F30FF] focus:bg-[#7F30FF] transition-all duration-200 ease-in-out group relative py-3 rounded-lg"
+          class="init relative z-20 flex flex-row items-center justify-center gap-2 rounded py-2 px-6 bg-transparent border border-[#7F30FF] text-zinc-100 animate-background hover:bg-[#7F30FF] focus:bg-[#7F30FF] transition-all duration-200 ease-in-out group relative py-3 rounded-lg"
           style="
             background-size: 400% 100%;
             background-image: linear-gradient(
@@ -120,43 +120,49 @@
         </button>
       </div>
 
+
+
+
       <!-- quiz -->
 
+
+
+
       <div
-        class="main-quiz w-full max-w-[1920px] absolute flex flex-col items-center"
+        class="main-quiz w-full sm:max-w-[1920px] absolute flex flex-col items-center"
       >
         <div
-          class="time sm:w-[100px] sm:h-[100px] absolute border-solid border-[5px] border-[#8F00FF] w-[50px] h-[50px] rounded-full top-[30px] right-[100px] flex justify-center items-center text-white font-bold text-4xl"
+          class="time sm:w-[100px] sm:h-[100px] absolute sm:absolute border-solid border-[5px] border-[#8F00FF] w-[50px] h-[50px] rounded-full top-[30px] right-[100px] flex justify-center items-center text-white font-bold text-4xl"
         >
           <span class="lg:text-[2rem] text-[1rem] lg:mt-2">10</span>
         </div>
 
         <div
-          class="quiz flex justify-center rounded-lg w-[500px] h-48 mt-[100px] bg-white"
+          class="quiz flex items-center justify-center rounded-lg sm:w-[500px] h-24 w-[250px] sm:h-[120px] mt-[100px] bg-white"
         >
-          <span class="w-[400px] font-medium mt-10 text-2xl">
+          <span class="sm:w-[400px] w-[200px] font-medium text-sl sm:text-2xl">
             Em quais anos ocorreu a segunda guerra mundial?</span
           >
         </div>
-        <div class="questions w-[500px] flex flex-col gap-4 mt-8">
+        <div class="questions w-[250px] sm:w-[500px] flex flex-col gap-4 mt-8">
           <button
             onclick="mark()"
             id="q1"
-            class="question cursor-pointer text-white pl-2 flex items-center w-[450px] h-12 bg-[#8F00FF] font-semibold rounded-lg"
+            class="question cursor-pointer text-white pl-2 flex items-center sm:w-[450px] w-[230px] h-12 bg-[#8F00FF] font-semibold rounded-lg"
           >
             <span class="pr-2">A) </span> <span>1922 a 1928</span>
           </button>
           <button
             onclick="mark1()"
             id="q2"
-            class="question cursor-pointer pl-2 flex items-center w-[350px] h-12 bg-white font-semibold rounded-lg"
+            class="question cursor-pointer pl-2 flex items-center w-[150px] sm:w-[350px] h-12 bg-white font-semibold rounded-lg"
           >
             <span class="pr-2">B)</span><span>1912 a 1918</span>
           </button>
           <button
             onclick="mark2()"
             id="q3"
-            class="question cursor-pointer text-white pl-2 flex items-center w-[400px] h-12 bg-[#8F00FF] font-semibold rounded-lg"
+            class="question cursor-pointer text-white pl-2 flex items-center w-[200px] sm:w-[400px] h-12 bg-[#8F00FF] font-semibold rounded-lg"
           >
             <span class="pr-2">C) </span> <span>1939 a 1945</span>
           </button>
