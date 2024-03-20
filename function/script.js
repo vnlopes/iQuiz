@@ -35,7 +35,6 @@ const init = () =>{
             if(time === 0){
                 clearInterval(fift)
                 time = 0;
-                alert('Seu tempo acabou!')
                 confirm()
             } else if(
                 time --
