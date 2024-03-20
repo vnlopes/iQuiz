@@ -13,11 +13,8 @@
     />
   </head>
   <body
-    class="bg-black flex items-center overflow-x-hidden min-h-[100vh] select-none flex-col"
+    class="bg-black flex items-center relative overflow-x-hidden overflow-y-hidden min-h-[100vh] select-none flex-col"
   >
-    <div
-      class="regressive block w-full h-full min-h-screen backdrop-blur-sm absolute flex justify-center items-center top-0"
-    ></div>
     <header
       class="w-full overflow-hidden flex justify-center items-center sticky top-0 z-30 backdrop-blur-sm"
     >
@@ -43,7 +40,10 @@
         </div>
       </a>
     </header>
-    <main class="flex justify-center items-center w-full px-4 flex-col">
+    <main class="flex  min-h-screen relative h-fit items-center w-full px-4 flex-col">
+      <div
+      class="regressive block w-screen sticky top-[70px] min-h-[100vh] backdrop-blur-sm absolute hidden flex justify-center items-center top-0"
+    ></div>
       <div
         class="welcome items-center flex-col mt-16 lg:mt-12 justify-center flex w-full sm:w-[800px]"
       >
@@ -124,12 +124,12 @@
       <!-- quiz -->
 
       <div
-        class="main-quiz w-full sm:max-w-[1920px] absolute top-0 flex flex-col items-center"
+        class="main-quiz w-full hidden sm:max-w-[1920px] absolute top-0 flex flex-col items-center"
       >
         <div
-          class="time sm:w-[100px] sm:h-[100px] sticky sm:mr-[-700px] border-solid border-[5px] border-[#8F00FF] w-[50px] h-[50px] rounded-full top-[100px] mr-[-350px] flex justify-center items-center text-white font-bold text-4xl"
+          class="time sm:w-[100px] sm:h-[100px] sticky sm:ml-[700px] border-solid border-[5px] border-[#8F00FF] w-[50px] h-[50px] rounded-full top-[100px] ml-[310px] flex justify-center items-center text-white font-bold text-4xl"
         >
-          <span class="lg:text-[2rem] text-[1rem] lg:mt-2">10</span>
+          <span class="lg:text-[2rem] text-[1rem] lg:mt-2">20</span>
         </div>
 
         <div class="quiz-quest">
@@ -168,81 +168,86 @@
             </button>
           </div>
         </div>
+
+        <hr class="w-[80%] opacity-[50%] h-[1px] bg-white mt-[50px]">
 
         <!-- quest2 -->
 
         <div class="quiz-quest">
           <div
-            class="quiz flex items-center justify-center rounded-lg sm:w-[500px] h-24 w-[250px] sm:h-[120px] mt-[110px] bg-white"
+            class="quiz flex items-center justify-center rounded-lg sm:w-[500px] h-24 w-[250px] sm:h-[120px] mt-[50px] bg-white"
           >
             <span
               class="sm:w-[400px] w-[200px] font-medium text-sl sm:text-2xl"
             >
-              Quantos elementos quimicos possui a tabela periódica?</span
+              Quantos elementos químicos possui a tabela periódica?</span
             >
           </div>
           <div
             class="questions w-[250px] sm:w-[500px] flex flex-col gap-4 mt-8"
           >
             <button
-              onclick="mark()"
-              id="q1"
+              onclick="markq1()"
+              id="qq1"
               class="question cursor-pointer text-white pl-2 flex items-center sm:w-[450px] w-[230px] h-12 bg-[#8F00FF] font-semibold rounded-lg"
             >
-              <span class="pr-2">A) </span> <span>1922 a 1928</span>
+              <span class="pr-2">A) </span> <span>97</span>
             </button>
             <button
-              onclick="mark1()"
-              id="q2"
+              onclick="markq2()"
+              id="qq2"
               class="question cursor-pointer pl-2 flex items-center w-[150px] sm:w-[350px] h-12 bg-white font-semibold rounded-lg"
             >
-              <span class="pr-2">B)</span><span>1912 a 1918</span>
+              <span class="pr-2">B)</span><span>118</span>
             </button>
             <button
-              onclick="mark2()"
-              id="q3"
+              onclick="markq3()"
+              id="qq3"
               class="question cursor-pointer text-white pl-2 flex items-center w-[200px] sm:w-[400px] h-12 bg-[#8F00FF] font-semibold rounded-lg"
             >
-              <span class="pr-2">C) </span> <span>1939 a 1945</span>
+              <span class="pr-2">C) </span> <span>150</span>
             </button>
           </div>
         </div>
+
+
+        <hr class="w-[80%] opacity-[50%] h-[1px] bg-white mt-[50px]">
 
         <!-- quest3 -->
 
         <div class="quiz-quest mb-[50px]">
           <div
-            class="quiz flex items-center justify-center rounded-lg sm:w-[500px] h-24 w-[250px] sm:h-[120px] mt-[110px] bg-white"
+            class="quiz flex items-center justify-center rounded-lg sm:w-[500px] h-24 w-[250px] sm:h-[120px] mt-[50px] bg-white"
           >
             <span
               class="sm:w-[400px] w-[200px] font-medium text-sl sm:text-2xl"
             >
-              Em quais anos ocorreu a segunda guerra mundial?</span
+              Quantos títulos mundiais possui a seleção brasileira de futebol?</span
             >
           </div>
           <div
             class="questions w-[250px] sm:w-[500px] flex flex-col gap-4 mt-8"
           >
             <button
-              onclick="mark()"
-              id="q1"
+              onclick="markqq1()"
+              id="qqq1"
               class="question cursor-pointer text-white pl-2 flex items-center sm:w-[450px] w-[230px] h-12 bg-[#8F00FF] font-semibold rounded-lg"
             >
-              <span class="pr-2">A) </span> <span>1922 a 1928</span>
+              <span class="pr-2">A) </span> <span>5</span>
             </button>
             <button
-              onclick="mark1()"
-              id="q2"
+              onclick="markqq2()"
+              id="qqq2"
               class="question cursor-pointer pl-2 flex items-center w-[150px] sm:w-[350px] h-12 bg-white font-semibold rounded-lg"
             >
-              <span class="pr-2">B)</span><span>1912 a 1918</span>
+              <span class="pr-2">B)</span><span>6</span>
             </button>
             <button
-              onclick="mark2()"
-              id="q3"
+              onclick="markqq3()"
+              id="qqq3"
               class="question cursor-pointer text-white pl-2 flex items-center w-[200px] sm:w-[400px] h-12 bg-[#8F00FF] font-semibold rounded-lg"
             >
-              <span class="pr-2">C) </span> <span>1939 a 1945</span>
+              <span class="pr-2">C) </span> <span>4</span>
             </button>
           </div>
         </div>
@@ -255,6 +260,8 @@
       />
     </main>
     <input class="opacity-0" type="checkbox" id="true" />
+    <input class="opacity-0" type="checkbox" id="true2" />
+    <input class="opacity-0" type="checkbox" id="true3" />
     <script src="./function/script.js"></script>
   </body>
 </html>
