@@ -86,7 +86,6 @@ main::before{
 
 .main-quiz{
     position: absolute;
-    opacity: 0;
     transition: 2s;
 }
 
@@ -101,8 +100,22 @@ header{
     background-color: #0d0d0dd3;
 }
 
+@keyframes start{
+    from{
+        margin-right: -500px;
+        opacity: 0;
+    } to {
+        opacity: 100%;
+        margin-right: 0;
+    }
+}
+
+.main-quiz{
+    animation: start 0.5s forwards ease-in;
+}
+
 .regressive{
-    opacity: 0;
+    /* opacity: 0; */
     transition: 0.9s;
     z-index: 0;
     background-color: #00000083;
@@ -147,4 +160,15 @@ header{
         width: 600px;
         background-color: white;
     }
+}
+
+
+::-webkit-scrollbar{
+    background-color: #0f0f0f;
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #8F00FF;
+    border-radius: 100px;
 }

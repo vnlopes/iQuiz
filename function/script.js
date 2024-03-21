@@ -2,9 +2,10 @@ let time = 20;
 let count = 6;
 const checkBox = document.querySelector('#true')
 
+
 const init = () =>{
-    document.querySelector('.main-quiz').style = 'opacity: 100%; display: flex;'
-    document.querySelector('.welcome').style = 'opacity: 0;'
+    // document.querySelector('.main-quiz').style = 'opacity: 100%; display: flex;'
+    // document.querySelector('.welcome').style = 'opacity: 0;'
     let regress = document.querySelector('.regressive');
     regress.style = 'color: white; opacity: 100%; display: flex; z-index: 40; font-weight: 900; font-size: 10rem;'
     
@@ -19,8 +20,8 @@ const init = () =>{
 
         if(count == 0){
             count = 0;
-            regress.style = 'opacity: 0; display: none;'
-            document.body.classList.remove('overflow-y-hidden')
+            regress.style = 'opacity: 0;'
+            document.body.classList.remove('overflow-y-hidden');
         } else{
             count --
             regress.innerHTML = count
@@ -94,9 +95,9 @@ const markq2 = () => {
 }
 
 const markq3 = () => {
-    document.querySelector('#qq1').style = 'border: 3px solid #00e40b;'
+    document.querySelector('#qq3').style = 'border: 3px solid #00e40b;'
     document.querySelector('#qq2').disabled = true;
-    document.querySelector('#qq3').disabled = true;
+    document.querySelector('#qq1').disabled = true;
     lerClicks.push('le')
 }
 
@@ -118,9 +119,9 @@ const markqq2 = () => {
 }
 
 const markqq3 = () => {
-    document.querySelector('#qqq1').style = 'border: 3px solid #00e40b;'
+    document.querySelector('#qqq3').style = 'border: 3px solid #00e40b;'
     document.querySelector('#qqq2').disabled = true;
-    document.querySelector('#qqq3').disabled = true;
+    document.querySelector('#qqq1').disabled = true;
     lerClicks.push('le')
 }
 
